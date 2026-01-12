@@ -1,26 +1,6 @@
 {
   "usuarios": [
     {
-      "id": 1,
-      "user": "admin",
-      "password": "123456"
-    },
-    {
-      "id": 2,
-      "user": "admin",
-      "password": "1234"
-    },
-    {
-      "id": "f943",
-      "user": "ca",
-      "password": "csw"
-    },
-    {
-      "id": "ec05",
-      "user": "dws",
-      "password": "dsw"
-    },
-    {
       "id": "858e",
       "user": "kkkk",
       "password": "1111"
@@ -29,11 +9,6 @@
       "id": "cea5",
       "user": "kkkk",
       "password": "1111"
-    },
-    {
-      "id": "e854",
-      "user": "registra",
-      "password": "dsa"
     }
   ]
 }

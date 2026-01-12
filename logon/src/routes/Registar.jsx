@@ -23,10 +23,13 @@ const Registar = () => {
       body: JSON.stringify(users)
     })
 
-    if(!res.ok) {
-      alert('erro ao cadastrar')
-      return
-    }
+    if (!res.ok) {
+  const error = await res.json()
+  console.log('❌ ERRO BACKEND:', error)
+  alert(error.error || 'Erro ao cadastrar')
+  return
+}
+
 
     alert('usuário cadastrado com sucesso!')
 
