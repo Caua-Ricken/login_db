@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { Navigate } from 'react-router-dom'
+import '../styles/Login.css'
 
 const Login = () => {
 
@@ -40,7 +40,7 @@ const Login = () => {
     }
 
     return (
-        <div className="container">
+        <div className="container-login">
             <form onSubmit={handleSubmit}>
                 <h2>Login</h2>
                 <label>
@@ -54,21 +54,24 @@ const Login = () => {
                 </label>
 
                 <div className='lembrar'>
-                    <input type="checkbox" />
+                    <label>
+                    <input type="checkbox" className='check'/>
                     Lembrar de mim
-                    <a href="#">esqueceu sua senha?</a>
+                    </label>
+                    <a href="#" className='link'>esqueceu sua senha?</a>
                 </div>
 
-                {error && <p>{error}</p>}
+                {error && <p className='carregando'>{error}</p>}
 
-                <button type="submit">Enviar</button>
+                <button type="submit" className='enviar'>Enviar</button>
 
                 <div className="registrar">
-                    <p>Não tem um login</p> <Link to='/Register'>Registrar</Link>
+                    <p>Não tem um login?</p> <Link to='/Register' className='link'>Registrar</Link>
                 </div>
 
-                {loading && <p>Carregando dados...</p>}
+                {loading && <p className='carregando'>Carregando dados...</p>}
             </form>
+
         </div>
     )
 }

@@ -1,0 +1,118 @@
+.container-login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.container-login form{
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    background-color: rgba(46, 64, 87, 0.45);
+    backdrop-filter: blur(14px);
+    border: 1.5px solid rgba(245, 215, 110, 0.35);
+}
+
+.container-login h2{
+    font-size: 4rem;
+    margin-bottom: 1.6rem;
+    color: #F5D76E;
+    font-weight: 500;
+}
+
+.container-login label{
+    width: 100%;
+    color: #F2F2F2;
+}
+
+.container-login input::placeholder{
+    color: rgba(242,242,242,0.45);
+}
+
+.container-login input{
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 1.4rem 3rem;
+    background-color: #2e2e2e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    outline: none;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    color: white;
+}
+
+.container-login input:focus{
+    border-color: #F5D76E;
+    box-shadow: 0 0 1.2rem rgba(245, 215, 110, 0.35);
+}
+
+.lembrar{
+    display: flex;
+    color: #F2F2F2;
+}
+
+.container-login .check{
+    width: auto;
+    padding: 0;
+    margin: 0;
+}
+
+.lembrar {
+    margin-bottom: 2rem;
+    font-size: 1.4rem;
+}
+
+.lembrar label {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.enviar{
+    width: 25rem;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    font-size: 1.6rem;
+    border-radius: .5rem;
+    background-color: #F5D76E;
+    color: #2E4057;
+    cursor: pointer;
+    box-shadow: 0 0 1.5rem rgba(245, 215, 110, 0.4);
+    transition: 0.3s;
+    margin-bottom: 1.2rem;
+    color: white;
+}
+
+.enviar:hover{
+    background-color: #C84B4B;
+    color: #fff;
+    box-shadow: 0 0 1.8rem rgba(200, 75, 75, 0.45);
+}
+
+.registrar{
+    display: flex;
+    font-size: 1.4rem;
+    gap: 1rem;
+    color: #F2F2F2;
+    justify-content: center;
+}
+
+.link{
+    color: #F5D76E;
+    text-decoration: none;
+}
+
+.link:hover{
+    color: #C84B4B;
+}
+
+.carregando{
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #F2F2F2;
+}
+

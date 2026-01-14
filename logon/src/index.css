@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-image: url(./assets/bart-simpson-the-5120x2880-9398.png);
+    background-size: cover;
+    font-family: sans-serif;
+}

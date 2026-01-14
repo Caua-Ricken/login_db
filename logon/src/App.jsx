@@ -6,9 +6,11 @@ function App() {
 
   return (
       <div>
-        <header>
-          <NavLink to='/'>Login</NavLink>
-          <NavLink to='/Users'>Usuários</NavLink>
+        <div class="particula"></div>
+
+        <header className='header-1'>
+          <NavLink to='/' className='navlink'>Login</NavLink>
+          <NavLink to='/Users' className='navlink'>Usuários</NavLink>
         </header>
         
         <Outlet/>
