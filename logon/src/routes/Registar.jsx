@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import { useState } from "react"
+import '../styles/Registrar.css'
 const url = 'http://localhost:5001/usuarios'
 
 const Registar = () => {
@@ -23,13 +24,10 @@ const Registar = () => {
       body: JSON.stringify(users)
     })
 
-    if (!res.ok) {
-  const error = await res.json()
-  console.log('❌ ERRO BACKEND:', error)
-  alert(error.error || 'Erro ao cadastrar')
-  return
-}
-
+    if(!user || !password){
+      alert('Preencha devidamente o campo')
+      return
+    }
 
     alert('usuário cadastrado com sucesso!')
 
@@ -41,7 +39,7 @@ const Registar = () => {
     <div>
         <div className="container">
           <form onSubmit={handleSubmit}>
-            <h2>Login</h2>
+            <h2>Cadastrar</h2>
             <label>
               <input type="text" placeholder='Usuário'value={user}
               onChange={(e) => setUser(e.target.value)}/>
@@ -52,20 +50,7 @@ const Registar = () => {
               onChange={(e) => setPassword(e.target.value)}/>
             </label>
 
-            <div className='lembrar'>
-              <input type="checkbox" />
-              Lembrar de mim
-              <a href="#">esqueceu sua senha?</a>
-            </div>
-
-  
-
-            <button type="submit">Enviar</button>
-
-            <div className="registrar">
-              <p>Não tem um login</p> <Link to='/Register'>Registrar</Link>
-            </div>
-
+            <button type="submit" className="enviar">Enviar</button>
           
           </form>
         </div>

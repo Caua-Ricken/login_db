@@ -1,0 +1,51 @@
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container form{
+    width: 40rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-align: center;
+    background-color: rgba(46, 64, 87, 0.45);
+    backdrop-filter: blur(14px);
+    border: 1.5px solid rgba(245, 215, 110, 0.35);
+}
+
+.container h2{
+    font-size: 4rem;
+    margin-bottom: 1.6rem;
+    color: #F5D76E;
+    font-weight: 500;
+}
+
+.container label{
+    width: 100%;
+    color: #F2F2F2;
+}
+
+.container input::placeholder{
+    color: rgba(242,242,242,0.45);
+}
+
+.container input{
+    width: 100%;
+    margin-bottom: 2rem;
+    padding: 1.4rem 3rem;
+    background-color: #2e2e2e;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    outline: none;
+    border-radius: .5rem;
+    font-size: 1.6rem;
+    color: white;
+}
+
+.container input:focus{
+    border-color: #F5D76E;
+    box-shadow: 0 0 1.2rem rgba(245, 215, 110, 0.35);
+}

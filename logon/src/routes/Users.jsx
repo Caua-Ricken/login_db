@@ -1,4 +1,5 @@
 import { useState } from "react"
+import '../styles/Users.css'
 
 const Users = () => {
 
@@ -16,6 +17,7 @@ const Users = () => {
     };
 
 
+
   const apagarUsuario = async () => {
     if(!userId){
       alert('digite um ID ⚠️')
@@ -26,17 +28,25 @@ const Users = () => {
       method: 'DELETE',
     })
 
-    setUser(user.filter((user) => user.id !== Number(userId)));
+    if(!res.ok) {
+      alert('erro ao excluir usuário')
+      return
+    }
+
+    setUser((prevUsers) => {
+    prevUsers.filter((user) => user.id !== Number(userId))
+})
+
     setUserId("");
     alert('Usuário apagado com sucesso 🗑️')
 
   }
 
   return (
-    <div>
+    <div className="container-usuar">
         <h2>Usuarios cadastrados:</h2>
 
-        <button className='mostrarUser' onClick={listarUsuarios}>Listar usuários</button>
+        <button className='enviar' onClick={listarUsuarios}>Listar usuários</button>
 
         <ul>
           {user.map((users) => (
@@ -46,9 +56,9 @@ const Users = () => {
           ))}
         </ul>
 
-        <input type="text" value={userId} onChange={(e) => setUserId(e.target.value)}/>
+        <input type="text" placeholder="Id do usuário:" value={userId} onChange={(e) => setUserId(e.target.value)}/>
 
-        <button onClick={apagarUsuario}>deletar user</button>
+        <button onClick={apagarUsuario} className="enviar">deletar user</button>
 
 
     </div>
