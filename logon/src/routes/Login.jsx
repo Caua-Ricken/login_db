@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import '../styles/Login.css'
@@ -12,12 +13,17 @@ const Login = () => {
 
     async function login() {
 
+
+        if (user.trim() === '' || password.trim() === '') {
+            setError('Preencha usuário e senha')
+            return
+        }
+
         setLoading(true)
 
-        const res = await fetch(`http://localhost:5001/usuarios?user=${user}&password=${password}`)
+        try {
+        const res = await fetch(`http://localhost:5001/usuarios?user=${user}`)
         const data = await res.json()
-
-        setLoading(false)
 
         if (data.length === 0) {
             setError('Usuário não encontrado')
@@ -31,7 +37,13 @@ const Login = () => {
         navigate('/Users')
         setUser('')
         setPassword('')
-    }
+        
+      } catch {
+        alert('Não foi possível conectar ao servidor')
+      } finally {
+        setLoading(false)
+      }
+    } 
     
 
     const handleSubmit = (e) => {

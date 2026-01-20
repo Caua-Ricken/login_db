@@ -1,3 +1,49 @@
 {
-  "usuarios": []
+  "usuarios": [
+    {
+      "id": "0b3e",
+      "user": "caua",
+      "password": "1"
+    },
+    {
+      "id": "d12d",
+      "user": "teste",
+      "password": ""
+    },
+    {
+      "id": "33d4",
+      "user": "teste",
+      "password": ""
+    },
+    {
+      "id": "8332",
+      "user": "teste",
+      "password": "2"
+    },
+    {
+      "id": "ae40",
+      "user": "teste2",
+      "password": "3"
+    },
+    {
+      "id": "fdbd",
+      "user": "teste",
+      "password": "2"
+    },
+    {
+      "id": "daa8",
+      "user": "teste",
+      "password": "2222"
+    },
+    {
+      "id": "d8da",
+      "user": "teste1",
+      "password": "22"
+    },
+    {
+      "id": "76bf",
+      "user": "teste1",
+      "password": "123"
+    }
+  ]
 }

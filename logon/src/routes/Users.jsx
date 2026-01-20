@@ -10,10 +10,21 @@ const Users = () => {
 
    
    const listarUsuarios = async () => {
+     try {
      const res = await fetch(url);
      const data = await res.json();
+
+     if(data.length === 0) {
+      alert('Nenhum usuario cadastrado')
+      return
+     }
+
      setUser(data);
      alert('Usuários listados com sucesso ✅')
+     
+     } catch {
+      alert('Erro ao buscar usuário')
+     }
     };
 
 
@@ -24,6 +35,7 @@ const Users = () => {
       return
     }
 
+    try {
     await fetch(`${url}/${userId}`, {
       method: 'DELETE',
     })
@@ -35,12 +47,15 @@ const Users = () => {
 
     setUser((prevUsers) => {
     prevUsers.filter((user) => user.id !== Number(userId))
-})
+  })
 
     setUserId("");
     alert('Usuário apagado com sucesso 🗑️')
 
+  } catch {
+    alert('Erro ao conectar ao servidor')
   }
+}
 
   return (
     <div className="container-usuar">

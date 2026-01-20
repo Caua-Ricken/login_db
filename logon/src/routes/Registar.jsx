@@ -1,12 +1,15 @@
+
 import { Link } from "react-router-dom"
 import { useState } from "react"
 import '../styles/Registrar.css'
+import { use } from "react"
 const url = 'http://localhost:5001/usuarios'
 
 const Registar = () => {
 
    const [user, setUser] = useState('')
    const [password, setPassword] = useState('')
+   const [loading, setLoading] = useState(false)
 
    const handleSubmit = async (e) => {
     e.preventDefault()
@@ -15,7 +18,8 @@ const Registar = () => {
       user,
       password
     }
-
+    
+    try {
     const res = await fetch(url, {
       method: 'POST',
       headers: {
@@ -33,7 +37,13 @@ const Registar = () => {
 
     setUser('')
     setPassword('')
-   }
+    
+   }  catch (err) {
+      alert('erro ao conectar com o servidor')
+    } finally {
+      setLoading(false)
+    }
+   }  
 
   return (
     <div>
