@@ -6,7 +6,7 @@ O projeto simula um sistema real de autenticação, apresentando uma tela de log
 ---
 
 📸 Preview
-![Preview do projeto](.logon/public/img.png)
+<img width="1750" height="938" alt="img" src="https://github.com/user-attachments/assets/23c4edfc-1825-4503-b5c3-b638aa430236" />
 
 Interface moderna com identidade visual criativa.
 
