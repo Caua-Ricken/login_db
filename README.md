@@ -6,7 +6,7 @@ O projeto simula um sistema real de autenticação, apresentando uma tela de log
 ---
 
 📸 Preview
-![Preview do projeto](./public/imagem.png)
+![Preview do projeto](./public/img.png)
 
 Interface moderna com identidade visual criativa.
 
@@ -52,4 +52,4 @@ Boas práticas de UI/UX
 
 1️⃣ Clone o repositório:
 
-git clone https://github.com/seu-usuario/sistema-login-ui.git
+git clone https://github.com/Caua-Ricken/login_db.git
